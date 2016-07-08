@@ -32,7 +32,7 @@ EOF"
 
   exec{ 'configure_cpan':
     command     => $real_exec_command,
-    creates     => '/root/.cpan/CPAN/MyConfig.pm',
+    creates     => '/usr/share/perl5/CPAN/Config.pm',
     require     => [ Package[$perl::cpan_package] ],
     user        => root,
     path        => $exec_path,
